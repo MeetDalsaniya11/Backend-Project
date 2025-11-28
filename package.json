@@ -1,0 +1,23 @@
+{
+  "name": "backend-project",
+  "version": "1.0.0",
+  "description": "A Backend Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeetDalsaniya11/Backend-Project.git"
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "author": "Meet Dalsaniya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MeetDalsaniya11/Backend-Project/issues"
+  },
+  "homepage": "https://github.com/MeetDalsaniya11/Backend-Project#readme"
+}
