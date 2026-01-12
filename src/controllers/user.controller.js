@@ -9,8 +9,8 @@ const generateAccessAndRefreshTokens = async(userId) =>
 {
     try {
         const user = await User.findById(userId)
-        const accessToken = user.generateAccessToken
-        const refreshToken = user.generateRefreshToken
+        const accessToken = user.generateAccessToken()
+        const refreshToken = user.generateRefreshToken()
 
         user.refreshToken = refreshToken
         await user.save({validateBeforeSave: false})
@@ -84,7 +84,7 @@ const loginUser = asyncHandler(async (req , res) => {
 
     const {email , username , password } = req.body          //req body -> data
 
-    if(!username || !email){                  //username or email
+    if(!username && !email){                  //username or email
         throw new ApiError(400 , "username or email is required")
     }
 
@@ -153,4 +153,4 @@ const logoutUser = asyncHandler( async (req , res) => {
     .json(new ApiResponse(200, {}, "User logged Out"))
 })
 
-export {registerUser , loginUser ,logoutUser}
+export {registerUser , loginUser , logoutUser}
